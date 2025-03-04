@@ -5,10 +5,10 @@ library(dplyr)
 dataPath <- "./data/UCI HAR Dataset/"
 
 ## function to extract the second element from a list
-## if not present defaults to first element
+## if second element not present defaults to first element
 secondElement <- function(x) {if(!is.na(x[2])) x[2] else x[1]}
 
-## read the ordered set of features and labels
+## read the ordered set of features (variables) and labels (values)
 ## remove the numeric value at the start of each line of the labels
 features <- readLines(paste0(dataPath,"features.txt"))
 labels <- readLines(paste0(dataPath, "activity_labels.txt"))
